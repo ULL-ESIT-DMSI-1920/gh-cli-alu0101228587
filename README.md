@@ -17,8 +17,6 @@ Tras haberlo salvado, en la terminal modificaremos la variable local _GITHUB_TOK
 Finalmente nos dirigiremos a nuestro fichero _~/.profile_ en Ubuntu. Otras distribuciones pueden tener un fichero de configuración distinto. Al final del documento vamos a pegar la línea anterior para que se configure nuestro token cada vez que iniciemos la shell.
 
 
-
-
 Token de acceso: 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
 export GITHUB_TOKEN=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
 
