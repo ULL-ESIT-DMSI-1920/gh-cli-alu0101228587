@@ -27,15 +27,19 @@ gh alias list                       # Para listar todos los alias.
 ```
 
 ### Alias para crear repositorios
-Vamos a hacer un alias para crear repositorios en la organización _ULL_ESIT_DMSI_1920_:
+Vamos a hacer un alias para crear un repositorio en una organización dada:
 ```sh 
-gh alias set create-repo 'repo create ULL-ESIT-DMSI-1920/"$1"'
+gh alias set create-repo 'repo create "$2"/"$1"' #gh create-repo [repositorio] [organización o propietario]
 ```
 Si ejecutamos el comando empleando el alias:
 
 ![Gh alias repo create](img/img2.png)
 
-
+### Alias para eliminar repositorios
+Vamos a generar una alias para eliminar un repositorio de una organización indicada:
+```sh
+gh alias set delete-repo 'api -X DELETE /repos/"$2"/"$1"' #gh delete-repo [repositorio] [organización o propietario]
+```
 
 Token de acceso: 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
 export GITHUB_TOKEN=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
