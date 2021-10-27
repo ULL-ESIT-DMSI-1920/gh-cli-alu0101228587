@@ -41,10 +41,23 @@ Vamos a generar una alias para eliminar un repositorio de una organización indi
 gh alias set delete-repo 'api -X DELETE /repos/"$2"/"$1"' #gh delete-repo [repositorio] [organización o propietario]
 ```
 
+### Alias para ver organizaciones
+gh alias set org-list "api --paginate /user/memberships/orgs --jq '.[].organization | .login, .url'"
+
+Paginate junta todos los diferentes request que nos llega desde el serivicio web.
+JQ sirve para filtrar archivos Json.
+.[] devuelve todos los elementos del array del fichero Json.
+.organization filtra los elementos que se llamen organization.
+| .login, .url sirve para indicar que queremos los elementos login y url.
+
+En resumen, '.[].organization | .login, .url' significa:
+* Quiero todos los elementos del array que se llamen organization.
+* Dentro de los elementos organization quiero los atributos login y url.
+
+
+
 Token de acceso: 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
 export GITHUB_TOKEN=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
-
-gh alias set org-list "api /user/memberships/orgs --jq '.[].organization | .login, .url'"
 
 gh api -X GET /user/orgs
 
