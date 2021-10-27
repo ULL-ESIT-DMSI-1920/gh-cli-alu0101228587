@@ -54,7 +54,14 @@ En resumen, '.[].organization | .login, .url' significa:
 * Quiero todos los elementos del array que se llamen organization.
 * Dentro de los elementos organization quiero los atributos login y url.
 
+### Extensiones GH
+El repo de la extensión tiene que ser un subrepo del de la práctica.
 
+Hacemos gh extension create gh-nombre en el repo de la práctica
+Nos movemos al directorio de la extensión y hacemos gh repo create --public ULL-ESIT-DMSI-1920/gh-nombre
+git submodule add direccionhttps
+
+Para clonar un super repo git clone --recurse-submodules direccion
 
 Token de acceso: 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
 export GITHUB_TOKEN=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
