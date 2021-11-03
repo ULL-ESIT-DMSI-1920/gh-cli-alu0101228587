@@ -31,7 +31,7 @@ Vamos a hacer un alias para crear un repositorio en una organización dada:
 ```sh 
 gh alias set create-repo 'repo create "$2"/"$1"' #gh create-repo [repositorio] [organización o propietario]
 ```
-Si ejecutamos el comando empleando el alias:
+Siii ejecutamos el comando empleando el alias:
 
 ![Gh alias repo create](img/img2.png)
 
