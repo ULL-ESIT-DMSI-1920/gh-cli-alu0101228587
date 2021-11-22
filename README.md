@@ -51,7 +51,7 @@ gh alias set org-list "api --paginate /user/memberships/orgs --jq '.[].organizat
 * **_--jq_**: Filtra la entrada en JSON.
     * **_.[]_**: Devuelve todos los elementos del array del fichero Json.
     * **_.organization_**: Filtra los elementos que se llamen _organization_.  
-   * **| _.login, .url_**: Indica que queremos los elementos _login y url_ de _organization_.
+    * **| _.login, .url_**: Indica que queremos los elementos _login y url_ de _organization_.
 
 En resumen, '.[].organization | .login, .url' significa:
 * Quiero todos los elementos del array que se llamen _organization_.
